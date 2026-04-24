@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0a7f3f" />
+    <title>Goalie Hero Shootout</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top-bar">
+        <h1>⚽ Goalie Hero Shootout</h1>
+        <button id="pauseToggle" class="btn secondary">Pause</button>
+      </header>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div><span class="label">Score</span><span id="score">0</span></div>
+        <div><span class="label">Shots</span><span id="shots">0</span></div>
+        <div><span class="label">Saves</span><span id="saves">0</span></div>
+        <div><span class="label">Streak</span><span id="streak">0</span></div>
+        <div><span class="label">Level</span><span id="level">1</span></div>
+        <div><span class="label">Best</span><span id="best">0</span></div>
+      </section>
+
+      <section class="field-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Soccer shootout game"></canvas>
+        <p id="status" class="status">Tap left, center, or right to dive and save!</p>
+      </section>
+
+      <section class="controls" aria-label="Controls">
+        <button class="btn" data-dive="left">⬅️ Dive Left</button>
+        <button class="btn" data-dive="center">🧤 Stay Center</button>
+        <button class="btn" data-dive="right">Dive Right ➡️</button>
+      </section>
+
+      <section class="extras">
+        <button id="challenge" class="btn secondary">30s Challenge</button>
+        <button id="resetBest" class="btn secondary">Reset Best</button>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
